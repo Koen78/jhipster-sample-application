@@ -1,0 +1,26 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "documentType": {
+      "home": {
+        "title": "Document Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Document Type",
+        "createOrEditLabel": "Maak of wijzig een Document Type",
+        "notFound": "No Document Types found"
+      },
+      "created": "A new Document Type is created with identifier {{ param }}",
+      "updated": "A Document Type is updated with identifier {{ param }}",
+      "deleted": "A Document Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Document Type {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Document Type"
+      },
+      "id": "ID",
+      "objectId": "Object Id",
+      "code": "Code",
+      "objectId": "Object Id"
+    }
+  }
+}

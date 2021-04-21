@@ -1,0 +1,26 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "gebruiker": {
+      "home": {
+        "title": "Gebruikers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Gebruiker",
+        "createOrEditLabel": "Maak of wijzig een Gebruiker",
+        "notFound": "No Gebruikers found"
+      },
+      "created": "A new Gebruiker is created with identifier {{ param }}",
+      "updated": "A Gebruiker is updated with identifier {{ param }}",
+      "deleted": "A Gebruiker is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Gebruiker {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Gebruiker"
+      },
+      "id": "ID",
+      "objectId": "Object Id",
+      "naam": "Naam",
+      "objectId": "Object Id"
+    }
+  }
+}

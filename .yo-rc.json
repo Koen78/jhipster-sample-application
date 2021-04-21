@@ -42,7 +42,9 @@
     "jwtSecretKey": "MWQzYTczOTEzNzliZDg1NWYxMjNmZWEzMTgyZDJlNDI3OWEyNDAwMGIyYWFiN2RhNmM2ZTRhZDk0M2NkYjE3YjgxNmFhZGMzZDEzNTNmNzQ3ODBkYjhkM2MyYTRiOTMxNGMzNTlhNGU5MWM4ZmIzNTRhNGYxMGYzMjUwM2E3OGE=",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Overview", "Gebruiker", "DocumentType"],
+    "lastLiquibaseTimestamp": 1618984376000
   },
   "git-provider": "GitHub",
   "git-company": "Koen78",

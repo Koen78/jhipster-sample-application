@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-overview-heading"
+        data-cy="OverviewCreateUpdateHeading"
+        jhiTranslate="jhipsterSampleApplicationApp.overview.home.createOrEditLabel"
+      >
+        Create or edit a Overview
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.overview.objectId" for="field_objectId"
+            >Object Id</label
+          >
+          <input type="number" class="form-control" name="objectId" id="field_objectId" data-cy="objectId" formControlName="objectId" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.overview.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="form-group">
+          <label jhiTranslate="jhipsterSampleApplicationApp.overview.gebruiker" for="field_gebruikers">Gebruiker</label>
+          <select class="form-control" id="field_gebruikers" data-cy="gebruiker" multiple name="gebruikers" formControlName="gebruikers">
+            <option
+              [ngValue]="getSelectedGebruiker(gebruikerOption, editForm.get('gebruikers')!.value)"
+              *ngFor="let gebruikerOption of gebruikersSharedCollection; trackBy: trackGebruikerById"
+            >
+              {{ gebruikerOption.objectId }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label jhiTranslate="jhipsterSampleApplicationApp.overview.documentType" for="field_documentTypes">Document Type</label>
+          <select
+            class="form-control"
+            id="field_documentTypes"
+            data-cy="documentType"
+            multiple
+            name="documentTypes"
+            formControlName="documentTypes"
+          >
+            <option
+              [ngValue]="getSelectedDocumentType(documentTypeOption, editForm.get('documentTypes')!.value)"
+              *ngFor="let documentTypeOption of documentTypesSharedCollection; trackBy: trackDocumentTypeById"
+            >
+              {{ documentTypeOption.objectId }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

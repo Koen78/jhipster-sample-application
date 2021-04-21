@@ -1,0 +1,32 @@
+{
+  "name": "DocumentType",
+  "fields": [
+    {
+      "fieldName": "objectId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "overview",
+      "otherEntityRelationshipName": "documentType",
+      "relationshipName": "objectId",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "document_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210421055256"
+}
