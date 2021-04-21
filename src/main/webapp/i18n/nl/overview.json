@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "overview": {
+      "home": {
+        "title": "Overviews",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Overview",
+        "createOrEditLabel": "Maak of wijzig een Overview",
+        "notFound": "No Overviews found"
+      },
+      "created": "A new Overview is created with identifier {{ param }}",
+      "updated": "A Overview is updated with identifier {{ param }}",
+      "deleted": "A Overview is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Overview {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Overview"
+      },
+      "id": "ID",
+      "objectId": "Object Id",
+      "name": "Name",
+      "gebruiker": "Gebruiker",
+      "documentType": "Document Type"
+    }
+  }
+}

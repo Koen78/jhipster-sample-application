@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Overview.
+    -->
+    <changeSet id="20210421055254-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="overview_id"
+                                 baseTableName="rel_overview__gebruiker"
+                                 constraintName="fk_rel_overview__gebruiker__overview_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="overview"/>
+
+        <addForeignKeyConstraint baseColumnNames="gebruiker_id"
+                                 baseTableName="rel_overview__gebruiker"
+                                 constraintName="fk_rel_overview__gebruiker__gebruiker_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gebruiker"/>
+
+        <addForeignKeyConstraint baseColumnNames="overview_id"
+                                 baseTableName="rel_overview__document_type"
+                                 constraintName="fk_rel_overview__document_type__overview_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="overview"/>
+
+        <addForeignKeyConstraint baseColumnNames="document_type_id"
+                                 baseTableName="rel_overview__document_type"
+                                 constraintName="fk_rel_overview__document_type__document_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="document_type"/>
+    </changeSet>
+</databaseChangeLog>
