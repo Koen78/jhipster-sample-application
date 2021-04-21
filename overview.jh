@@ -1,0 +1,19 @@
+
+entity Overview {
+	objectId Long,
+	name String
+}
+ entity Gebruiker {
+    objectId Long,
+ 	naam String
+ }
+  entity DocumentType {
+    objectId Long,
+  	code String
+  } 
+
+relationship ManyToMany {
+	Overview{gebruiker(objectId)} to Gebruiker{objectId}
+	Overview{documentType(objectId)} to DocumentType{objectId}
+}
+
